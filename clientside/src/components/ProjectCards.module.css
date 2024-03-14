@@ -1,0 +1,45 @@
+.lift {
+  position: relative;
+  top: -0.5rem;
+}
+
+.cardBackground {
+  background-color: #efeffc;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #efeffc 4px ), repeating-linear-gradient( #c9ccfc55, #c3c6ff );
+}
+
+.pcard {
+    padding: 20px;
+    width: 250px;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+  
+  .pcard img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .pcard p {
+    margin-bottom: 10px;
+  }
+  
+  .pcard .buttons {
+    display: flex;
+  }
+  
+.pcard button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a9acdd;
+    color: black;
+    cursor: pointer;
+  }
+  
+.pcard button:hover {
+    transition-duration: 0.3s;
+    background-color: #787dbb;
+}

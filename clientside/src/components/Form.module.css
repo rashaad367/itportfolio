@@ -1,0 +1,18 @@
+.background {
+    background-color: #e5e5f7;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 38px ), repeating-linear-gradient( #c4c7ff55, #cbceff );
+}
+
+.btn button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a9acdd;
+    color: black;
+    cursor: pointer;
+  }
+  
+.btn button:hover {
+    transition-duration: 0.3s;
+    background-color: #787dbb;
+}
