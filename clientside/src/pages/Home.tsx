@@ -1,6 +1,7 @@
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ExperienceTimelime from "../components/ExperienceTimeline";
 
 const Home: React.FC = () => {
   AOS.init({ once: true });
@@ -48,9 +49,10 @@ const Home: React.FC = () => {
            
           </div>
         </div>
-        <div className="center">
-          <h2 className="sub-heading my-4" data-aos="fade-in" data-aos-duration="3000">Projects</h2>
-          <h2 className="sub-heading" data-aos="fade-in" data-aos-duration="3000">Abilities</h2>
+        <div>
+          <ExperienceTimelime></ExperienceTimelime>
+          <h2 className="sub-heading container-lg" data-aos="fade-in" data-aos-duration="3000">Projects</h2>
+          <h2 className="sub-heading container-lg" data-aos="fade-in" data-aos-duration="3000">Abilities</h2>
         </div>
         
         <div>

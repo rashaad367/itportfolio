@@ -8,12 +8,12 @@ const NavBar: React.FC = () => {
       <div className="text-white front-bold text-lg">RJ</div>
       <ul className="flex space-x-4">
         <li key="home">
-          <a href="/" className="text-white">
+          <a href="/" className="text-white border-2 px-2">
             Home
           </a>
         </li>
         <li key="resume">
-          <a href="/resume" className="text-white">
+          <a href="/resume" className="text-white border-2 px-2">
             Resume/CV
           </a>
         </li>
