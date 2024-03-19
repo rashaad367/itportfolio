@@ -10,9 +10,9 @@ const ExperienceTimelime: React.FC = () => {
             <div>
                 <h2>Harris Teeter</h2>
                 <p>2017 - 2019</p>
-                <ul>
-                    <li>* Provided efficient and courteous service to customers through using customer service excellence skills.</li>
-                    <li>* Performed opening and closing procedures, such as counting the cash register, restocking, and cleaning.</li>
+                <ul className="my-16">
+                    <li>•	Provided efficient and courteous service to customers through using customer service excellence skills.</li>
+                    <li>•	Achieved 100% accuracy in cash register balancing and completed opening and closing tasks within timeframes.</li>
                 </ul>
             </div>
             <div className="mx-40">
@@ -26,9 +26,9 @@ const ExperienceTimelime: React.FC = () => {
             <div className="mr-16">
                 <h2>Reunion Marketing</h2>
                 <p>2023 - 2024</p>
-                <ul>
-                    <li>* Collaborated with the SEO team and its different departments to build appealing pages for hundreds of clients.</li>
-                    <li>* Assisted in increasing the SEO of our clients so they could generate more leads and have higher conversion rates.</li>
+                <ul className="my-16">
+                    <li>•	Collaborated with the SEO team and launched about 150 web pages a week increasing website traffic by 90%.</li>
+                    <li>•	Contributed to increasing our sites SEO, allowing a 15% increase in client lead generation and conversion rates.</li>
                 </ul>
             </div>
             
