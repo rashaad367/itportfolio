@@ -2,6 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ExperienceTimelime from "../components/ExperienceTimeline";
+import Projects from "../components/Projects";
 import Image from "../assets/photo.jpg";
 
 const Home: React.FC = () => {
@@ -50,8 +51,7 @@ const Home: React.FC = () => {
         </div>
         
         <div>
-          <h2 className="sub-heading container-lg" data-aos="fade-in" data-aos-duration="3000">Projects</h2>
-          <h2 className="sub-heading container-lg" data-aos="fade-in" data-aos-duration="3000">Abilities</h2>
+          <Projects></Projects>
           <ExperienceTimelime></ExperienceTimelime>
         </div>
         

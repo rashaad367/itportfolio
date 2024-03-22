@@ -1,11 +1,11 @@
 import React from "react";
+import style from "../components/ProjectCards.module.css";
 
 type CardProps = {
   name: string;
   imageUrl: string;
   description: string;
   button1Text: string;
-  button2Text: string;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -13,10 +13,9 @@ const Card: React.FC<CardProps> = ({
   imageUrl,
   description,
   button1Text,
-  button2Text,
 }) => {
   return (
-    <div>
+    <div className="container-lg">
       <div>
         <h1 className="font-mono center leading-loose">{name}</h1>
         <img src={imageUrl} alt="Card" className="mb-4" />
@@ -24,15 +23,8 @@ const Card: React.FC<CardProps> = ({
         <div className="flex">
           <button
             className="mr-4 w-1/2 font-bold font-mono transition transform hover:-translate-y-1"
-            onClick={() => console.log(button1Text)}
           >
             {button1Text}
-          </button>
-          <button
-            className="w-1/2 font-bold font-mono transition transform hover:-translate-y-1"
-            onClick={() => console.log(button2Text)}
-          >
-            {button2Text}
           </button>
         </div>
       </div>
