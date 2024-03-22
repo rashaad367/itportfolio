@@ -31,8 +31,6 @@ const Home: React.FC = () => {
           </h2>
           <div className="container-lg flex">
             <div className="my-16">
-            </div>
-            <div className="my-16">
               <h1
                 className="sub-heading"
                 data-aos="fade-right"
@@ -45,13 +43,16 @@ const Home: React.FC = () => {
                 
               </div>
             </div>
+            <div className="ml-auto">
+              <img src={Image} height="200" width="200" alt="headshotimage" className="rounded-full" />
+            </div>
           </div>
         </div>
-        <img src={Image} height="200" width="200" alt="headshotimage" />
+        
         <div>
-          <ExperienceTimelime></ExperienceTimelime>
           <h2 className="sub-heading container-lg" data-aos="fade-in" data-aos-duration="3000">Projects</h2>
           <h2 className="sub-heading container-lg" data-aos="fade-in" data-aos-duration="3000">Abilities</h2>
+          <ExperienceTimelime></ExperienceTimelime>
         </div>
         
         <div>

@@ -4,7 +4,7 @@ import style from "./ExperienceTimeline.css";
 
 const ExperienceTimelime: React.FC = () => {
     return (<>
-
+        <h2 className="sub-heading container-lg">Experience</h2>
         <hr className="container-lg" />
         <div className="container-lg flex justify-evenly">
             <div>
