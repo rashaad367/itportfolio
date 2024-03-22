@@ -2,6 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ExperienceTimelime from "../components/ExperienceTimeline";
+import Image from "../assets/photo.jpg";
 
 const Home: React.FC = () => {
   AOS.init({ once: true });
@@ -45,10 +46,8 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-end container-lg">
-           
-          </div>
         </div>
+        <img src={Image} height="200" width="200" alt="headshotimage" />
         <div>
           <ExperienceTimelime></ExperienceTimelime>
           <h2 className="sub-heading container-lg" data-aos="fade-in" data-aos-duration="3000">Projects</h2>
