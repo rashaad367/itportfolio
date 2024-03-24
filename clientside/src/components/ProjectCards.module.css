@@ -4,8 +4,8 @@
 }
 
 .cardBackground {
-  background-color: #efeffc;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #efeffc 4px ), repeating-linear-gradient( #c9ccfc55, #c3c6ff );
+  background-color: #2d2d85;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #15152b 4px ), repeating-linear-gradient( #04050a55, #0e0f1c );
 }
 
 .pcard {
