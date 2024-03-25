@@ -4,26 +4,31 @@
 }
 
 .cardBackground {
-  background-color: #2d2d85;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #15152b 4px ), repeating-linear-gradient( #04050a55, #0e0f1c );
+  background-color: #2d5c85;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #15152b 4px ), repeating-linear-gradient( #04050a55, #0e161c );
+  padding: 1rem 0 1rem 0;
 }
 
 .pcard {
     padding: 20px;
     width: 250px;
-    height: 350px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 370px;
+    background-color: rgb(60, 101, 143);
+    box-shadow: 0 4px 8px 0 rgba(195, 191, 191, 0.2);
     margin: 10px;
   }
   
   .pcard img {
-    width: 100%;
+    width: 90%;
     height: auto;
+    margin: 0 auto;
     margin-bottom: 10px;
   }
   
   .pcard p {
     margin-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 1rem;;
   }
   
   .pcard .buttons {
@@ -33,9 +38,10 @@
 .pcard button{
     padding: 10px 20px;
     border: none;
+    margin: 0 auto;
     border-radius: 4px;
-    background-color: #a9acdd;
-    color: black;
+    background-color: #191c54;
+    color: rgb(226, 226, 226);
     cursor: pointer;
   }
   

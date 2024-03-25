@@ -44,7 +44,7 @@ const Home: React.FC = () => {
                 
               </div>
             </div>
-            <div className="ml-auto">
+            <div className="ml-auto flex">
               <img src={Image} height="200" width="200" alt="headshotimage" className="rounded-full" />
             </div>
           </div>

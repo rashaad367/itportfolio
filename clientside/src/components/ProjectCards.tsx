@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
     <div className="container-lg">
       <div className={style.cardBackground}>
       <div className={style.pcard}>
-        <h1 className="font-mono center leading-loose">{name}</h1>
+        <h1 className="font-mono center leading-loose text-white font-bold">{name}</h1>
         <img src={imageUrl} alt="Card" className="mb-4" />
         <p className="mb-4 leading-relaxed">{description}</p>
         <div className="flex">
