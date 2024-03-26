@@ -6,6 +6,7 @@ type CardProps = {
   imageUrl: string;
   description: string;
   button1Text: string;
+  link: string;
 };
 
 const Card: React.FC<CardProps> = ({
@@ -13,6 +14,7 @@ const Card: React.FC<CardProps> = ({
   imageUrl,
   description,
   button1Text,
+  link,
 }) => {
   return (
     <div className="container-lg">
@@ -22,11 +24,11 @@ const Card: React.FC<CardProps> = ({
         <img src={imageUrl} alt="Card" className="mb-4" />
         <p className="mb-4 leading-relaxed">{description}</p>
         <div className="flex">
-          <button
+          <a href={link}
             className="mr-4 w-1/2 font-bold font-mono transition transform hover:-translate-y-1"
           >
             {button1Text}
-          </button>
+          </a>
         </div>
       </div>
     </div>
