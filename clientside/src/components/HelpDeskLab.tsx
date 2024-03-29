@@ -61,14 +61,26 @@ const HelpDeskLab: React.FC = () => {
                 </p>
             </div>
             <div>
-                <h2 className="sub-heading">Installing Inwdows Server 2016</h2>
-                <h3 className="bg-white mt-12">Installing windows server 2016 &#40;desktop experience&#41;</h3>
+                <h2 className="sub-heading">Installing Windows Server 2016</h2>
+                <h3 className="bg-white mt-12">Installing Windows Server 2016 &#40;desktop experience&#41;</h3>
                 <p>
-                    Download the ISO file from windows side for virtual machine use. Use you have booted on virtual machine, now its time to install the desktop experience version.
+                    Download the ISO file from Windows side for virtual machine use. Use you have booted on virtual machine, now its time to install the desktop experience version.
                     Select understable lanaguage / keyboard. Click install now and choose "Desktop Experience" Windows Server 2016 OS. Custom install only, and create administrator
                     account password. remember to use ctrl-alt-del to prompt for password on login screen. Remove the VM disk as we don't need it anymore. Click "Yes" for Networks pop-up.
                     Check to see if Server Manager application exist. Change the computer name to something such as &#40;Server2016&#41;. Optionally, you can adjust you OS to be set for
                     best performance to decrease possible lag from here.
+                </p>
+                
+            </div>
+            <div>
+                <h2 className="sub-heading">Installing Windows 10</h2>
+                
+                <p>
+                    Download the ISO file from Windows side for virtual machine use. IMPORTANT: select create installation media (USB, DVD, ISO) for another PC, otherwise you could mess up your computer
+                    Check the recommended options. Choose the ISO file and put in downloads folder. Create a virtual box &#40;don't prematurely put ISO in yet&#41;. Next, start up virtual box and
+                    change to the Windows ISO you just downloaded when it prompts to one. Next, hit install and you can click "I don't have product key". Select Windows 10 Pro so you can
+                    add to domain server. Select custom installation and set up langauges &#40;english, US&#41;. Skip keyboard layout for qwerty. Set up for personal use.
+                    Finally, create user account. We will call it User.
                 </p>
                 
             </div>
