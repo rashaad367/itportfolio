@@ -60,7 +60,7 @@ const HelpDeskLab: React.FC = () => {
                     click network, and change to bridged adapter. You can also enabled promiscuous mode.
                 </p>
             </div>
-            <div>
+            <div className="my-16">
                 <h2 className="sub-heading">Installing Windows Server 2016</h2>
                 <h3 className="bg-white mt-12">Installing Windows Server 2016 &#40;desktop experience&#41;</h3>
                 <p>
@@ -72,9 +72,9 @@ const HelpDeskLab: React.FC = () => {
                 </p>
                 
             </div>
-            <div>
+            <div className="my-16">
                 <h2 className="sub-heading">Installing Windows 10</h2>
-                
+                <h3 className="bg-white mt-12">Installing Windows 10 with ISO/Bootable USB</h3>
                 <p>
                     Download the ISO file from Windows side for virtual machine use. IMPORTANT: select create installation media (USB, DVD, ISO) for another PC, otherwise you could mess up your computer
                     Check the recommended options. Choose the ISO file and put in downloads folder. Create a virtual box &#40;don't prematurely put ISO in yet&#41;. Next, start up virtual box and
@@ -83,6 +83,76 @@ const HelpDeskLab: React.FC = () => {
                     Finally, create user account. We will call it User.
                 </p>
                 
+            </div>
+
+            <div className="my-16">
+                <h2 className="sub-heading">Active Directory Set Up</h2>
+                <h3 className="bg-white mt-12">Active Directory domain services set up</h3>
+                <p>
+                    Go to Windows Server 2016. Open up Server Manager. Click "Manage" and then next. Select "Role-based or feature-based installtion...".
+                    Next, keep note of Server IP address. Select "Active directory domain servers" and hit "Add feature". Hit next and install. Click promote server to domain.
+                    Select add a new forest. Crate root domain name &#40;.org, .com, .local&#41;. Also, note that if putting online then make sure DNS isn't in use already. Next,
+                    click next and create password and NETBOIS name. Hit next until you get to install, click "Install" and then auto restart.
+                </p>
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Chaning Computer Name</h2>
+                <h3 className="bg-white mt-12">Changing computer name</h3>
+                <p>
+                    Go to file explorer. On older windows versions you can quickly access this with "c:" in windows search menu. Right click "ThisPC", go to properties, change settings,
+                    computer name, and hit change to change the computer name. After this, restart your computer/desktop.
+                </p>
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">RSAT Tools Helpdesk Account</h2>
+                <h3 className="bg-white mt-12">RSAT tools helpdesk account</h3>
+                <p>
+                    Go to file explorer, right click "ThisPC" and hit "manage". Go to local users and groups, click users. Right click Administrator, and click properties.
+                    Uncheck disable account, apply, and hit ok. Also, note that if arrow is pointing down on user account icon, that means account is disabled. Right click
+                    Administrator and set password. Sign out, and sign in as Administrator. Go to file explorer, right click "ThisPC" and remove User. Sign out, sign in, and
+                    go to start menu. Go to "add or remove programs".<br/><br/>Select "optional features / add a feature". Give access to RSAT Tools: RSAT: Active Directory Certificate Services,
+                    RSAT: Active Directory Domain Services..., RSAT: DHCP Server Tools, RSAT: DNS Server Tools, RSAT: Group Policy Management Tools, RSAT: Remote Desktop Services Tools,
+                    RSAT: Server Manager. After selecting these RSAT Tools, hit install. Sign out, sign back in. On Windows Server 2016 go to the command line and type ipconfig to see IPV4.
+                    Change the name of windows 10 computer to say something like desktop1. Install crhome, search TeamViewer and install. Ping to Windows Server 2016 IPV4 address. Hit
+                    Control Panel and View Network Status. Change adapter settings, select ethernet, and go to properties. Assign static IPV4 address while setting subnet mask and default
+                    gateway to same as IP address for the Window Server 2016 server.<br/><br/> The Preffered DNS Server: &#123;server ip address&#125;, the Alternate DNS server: &#123;default gateway&#125;.
+                    After, in the virtual box, select devices, select network, and choose host-only adapter. Ping to server again, see if you get reponse. Go to "ThisPC", right click to select
+                    properties, change settings, select change, select domain, put in servers domain name, and then sign in with Admin or Helpdesk account. After all this, restart. Check to see
+                    if desktop1 was added to server by goign to Active Directory and clicking Computers. Use a user account with administrative/helpdesk privilages through "Other user" on Windows 10 so we use
+                    domain/server connected account &#40;not local account&#41;. Check if you have access to RSAT tools and server manager from that account. From here, if you want, you can pin Active
+                    Directory &#40;AD&#41; to Windows taskbar.
+                </p>
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Active Directory In Detail</h2>
+                <h3 className="bg-white mt-12">Set up active directory users and computers</h3>
+                <p>
+                   Go to Server Manager and click Tools. Click Active Directory Users and Computers. You can also, if you want, pin Active Directory to taskbar after right clicking
+                   Active Directory. 
+                </p>
+                <h3 className="bg-white mt-12">Create new user in active directory</h3>
+                <p>
+                    Go to Active Directory. Hit drop down on domain. Right click "Users", hover over "New" and select "User".
+                </p>
+                <h3 className="bg-white mt-12">Copy user in active directory</h3>
+                <p>
+                    Go to Active Directory. Hit drop down on domain service. Go to "Users" or "Find" to find &#123;user&#125; you are looking for to copy. Right click &#123;user&#125;,
+                    and click copy. You can also use this as a way to quickly create another user that may possess simlar or same properties. This is faster than having to create the
+                    user and add user properties from scratch.
+                </p>
+                <h3 className="bg-white mt-12">Searching for user, groups, computers in active directory</h3>
+                <p>
+                    Right click on domain or another file. Make sure find filter is set to "Entire directory" to more easily find things. Once you have what you are looking for, click find now.
+                </p>
+                <h3 className="bg-white mt-12">Advanced features search on active directory</h3>
+                <p>
+                    When finding user/group it will state which folder they are apart of. Click the found user to bring up user properties. Go to "Object" and location is in this format "&#123;domain&#125;/&#123;folder&#125;/&#123;sub folder&#125;.
+                </p>
+                <h3 className="bg-white mt-12">Enabling recycle bin in active directory</h3>
+                <p>
+                    Go to the "Active Directory Administrative Center" applicaton. Go to domain "&#123;domain service name&#125; &#40;local&#41;"". Click "enable recycle bin", then hit ok. Hit the refresh button
+                    and "enable recycle bin" should be greyed out. Check to see if you have "Deleted Objects" folder.
+                </p>
             </div>
         </div>
         
