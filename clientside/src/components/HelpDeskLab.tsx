@@ -154,6 +154,37 @@ const HelpDeskLab: React.FC = () => {
                     and "enable recycle bin" should be greyed out. Check to see if you have "Deleted Objects" folder.
                 </p>
             </div>
+             <div className="my-16">
+                <h2 className="sub-heading">Command advanced with Organizational Unit &#40;OU&#41;</h2>
+                <h3 className="bg-white mt-12">Comman advanced features invovled with OU</h3>
+                <p>
+                    Open Server Manager. Create user account through active directory. Create or put in appropriate organizational unit. Grab user and place in OU. Go to view and
+                    select advanced features, then click on OU and double lcick user so you can see attribute editor for general account info &#40;password expires, last set, principle name, etc&#41;.
+                    Right click user, go to all task, and hit resultant set policy &#40;logging&#41;. Under computer selection, select another computer, browse, and then put in &#40;helpdesk&#41; desktop
+                    name. Finish policy wizard setup. View policies set up on that computer.
+                </p>
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Group Policy Management</h2>
+                <h3 className="bg-white mt-12">Working with Group Policy Management &#40;GPO&#41;</h3>
+                <p>
+                    Go to Server Manager, and click on tools. Hit Group Policy Management and select default domain, and then settings. View policy information &#40;tip: take screen shot of policy
+                    that has to do with many accounts&#41;. If account lockout threshold is zero &#40;0 invalid log in attempts&#41; then change through Group Policy Management editor so accounts
+                    don't get logged out on accident from first attempt.
+                </p>
+                <h3 className="bg-white mt-12">Opening Group Policy Management editor</h3>
+                <p>
+                    In Group Policy Management, right click default domain policy. Click edit, and it opens. Under policies and window settings you have your Security Settings and these hold the
+                    account policies.
+                </p>
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Common Commandline Commands</h2>
+                <h3 className="bg-white mt-12">Common Commands used in the Windows commandline</h3>
+                <p>
+                    \
+                </p>
+            </div>
         </div>
         
 
