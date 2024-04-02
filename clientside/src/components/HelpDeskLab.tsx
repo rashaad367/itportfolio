@@ -182,7 +182,12 @@ const HelpDeskLab: React.FC = () => {
                 <h2 className="sub-heading">Common Commandline Commands</h2>
                 <h3 className="bg-white mt-12">Common Commands used in the Windows commandline</h3>
                 <p>
-                    \
+                    ipconfig: shows a general overview of your Windows IP Configuration, displays the IP address, Subnet Mask, and Default Gateway for all adapters.
+                    ipconfig /all: Details of every network connection including your physical &#40;MAC&#41; address, DHCP connections, lease durations, and comprehensive IPv6 data will be provided.
+                    net use: shows shared drives the current user is connected to
+                    net user &#123;user&#125; /domain, can be used to create, delete, enable or disable user accounts on the system and set passwords for network user accounts for server. You may have to run as
+                    administrator to use this. Can also be used to quickly check if password for an account is about to expire.
+                    
                 </p>
             </div>
         </div>
