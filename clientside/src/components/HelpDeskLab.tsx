@@ -190,6 +190,13 @@ const HelpDeskLab: React.FC = () => {
                     
                 </p>
             </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Common Active Directory Issues</h2>
+                <h3 className="bg-white mt-12">Common issues in active directory</h3>
+                <p>
+                   / 
+                </p>
+            </div>
         </div>
         
 
