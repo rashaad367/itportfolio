@@ -194,7 +194,36 @@ const HelpDeskLab: React.FC = () => {
                 <h2 className="sub-heading">Common Active Directory Issues</h2>
                 <h3 className="bg-white mt-12">Common issues in active directory</h3>
                 <p>
-                   / 
+                   User gets locked out: go to users account in active directory, double click, hit unlock &#40;could be because outlook, VPN, mobile, computer, or being connected on more than two devices&#41;.
+                </p>
+                <p>
+                    Account disabled: go to users account in active directory, double click, select account, enable account, reset password.
+                </p>
+                <p>
+                    Account expired: either the fix is changing the password in active directory for that account or to change the expiration date &#40;find account, double click it, go to account tab to do this&#41;.
+                    After this you can use "net user &#123;user account name&#125; /domain" in the command line to see if account settings are set right.
+                </p>
+                <p>
+                    Computer is disabled: if prompted "The security database on the server does not have a computer account for this workstation trust relationship", go to active directory, go to domain, go to computers
+                    and enable the computer/desktop.
+                </p>
+                <p>
+                    Computer fallen/deleted from domain: local users should still work but domain server accounts won't. Usually when trying to log in a message appears stating "The security database on the server does
+                    not have a computer account for this workstation trust relationship". In this case, ping the computer/desktop to see if it is on server. Log in as a local user whilst using &#40;..\administrator&#41;.
+                    Once logged in, go to "ThisPC", its properties, and go to change settings, change computer name settings, change to workgroup, press ok and restart. Log back in and go to computer name settings and set
+                    back to domain. Now go back to active directory and check if computer shows up &#40;may need to refresh&#41;.
+                </p>
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Removing user after adding admin account to desktop with advanced system settings</h2>
+                <h3 className="bg-white mt-12">Removing users after adding admin account to desktop with advanced system settings &#40;not AD&#41; and adding to domain</h3>
+                <p>
+                    Go to file explorer, "ThisPC", and press manage. Go to local users and groups, users, and enable administrator account. Sign out of user account and sign in with admin account.
+                    Go to file explorer, ThisPC, right click for properties, click advanced system settings, go to users profiles settings, and delete the placeholder user account. Open control panel, view network status, and
+                    change the adapter settings. Set up static IP so you can connect to server form virtual environment. Through the virtual machine, go to devices, click network, and select the host-only adapter. Open
+                    command line and ping domain server &#40;should give a response&#41;. Within ThisPC go to advanced system settings, the properties tab, and change computer name settings. You make the admin account a member
+                    of the domain. Here you may be prompted for admin or helpdesk credentials. Now, you can check to see if desktop is added to comptuers in Active Directory. You should also check to see if you can log into
+                    another users account that is on the sersver.
                 </p>
             </div>
         </div>
