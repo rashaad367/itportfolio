@@ -226,6 +226,17 @@ const HelpDeskLab: React.FC = () => {
                     another users account that is on the sersver.
                 </p>
             </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Distribution vs. Security Group</h2>
+                <h3 className="bg-white mt-12">Distribution groups</h3>
+                <p>
+                    In a distribution group, everyone receives email / task that was sent out. The email may have to go through third-party services.
+                </p>
+                <h3 className="bg-white mt-12">Security groups</h3>
+                <p>
+                    Security groups include things such as shared drive permissions, folder access, and VPN access. These ensure more security to enterprise server envinronments.
+                </p>
+            </div>
         </div>
         
 
