@@ -237,6 +237,22 @@ const HelpDeskLab: React.FC = () => {
                     Security groups include things such as shared drive permissions, folder access, and VPN access. These ensure more security to enterprise server envinronments.
                 </p>
             </div>
+
+            <div className="my-16">
+                <h2 className="sub-heading">Creating Security Groups, Shared Folders, Map Drives</h2>
+                <h3 className="bg-white mt-12">Creatings shared groups, shared folders, map drives</h3>
+                <p>
+                    Go to Server Manager. Go to file and storage services, shares, right click Server 2016 are, and click New Share. Hit next, and you hit next again unless you want to choose specific location. Give a share name &#40;usually same as some OU&#41;.
+                    Pay attention to \\&#123;server computer name&#125;\&#123;share name&#125;. Create share, go to view folder&#40;s&#41; in local disk or area where stored "shares" folder is. You can check to see if folders are shared
+                    through properties, and then sharing. Go to Active Directory, domain, users, right click add group &#40;make sure group type is security&#41;. If you want to know who approves that folder double click group and go to "managed by".
+                    Double click group and change "managed by" name using domain server account. Right click on share folder, select properties, put netowrk pathname "\\&#123;server computer name&#125;\&#123;share name&#125; &#40;share folder&#41;", then hit apply
+                    and ok. Double click group that is now associated with folder, click members, select add users. Go to share folder, properties, select sharing advanced sharing, disable inheritance, and "convert inherited permissions into explicit...". Make sure
+                    to always keep the admin account. Remove instances of "Users", click add, select principle, add helpdesk, add the group that has access to that folder with modify basic permissions. Apply and hit ok.
+                    Go to sharing, hit "share...", give group read/write permissions. Check to see if network pathname for file works on user account file explorer. Quick tip, if you want to shortcut the shared file, drag the file icon
+                    from the path search bar and put in quick access.
+                </p>
+                
+            </div>
         </div>
         
 
