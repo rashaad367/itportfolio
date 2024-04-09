@@ -251,7 +251,17 @@ const HelpDeskLab: React.FC = () => {
                     Go to sharing, hit "share...", give group read/write permissions. Check to see if network pathname for file works on user account file explorer. Quick tip, if you want to shortcut the shared file, drag the file icon
                     from the path search bar and put in quick access.
                 </p>
-                
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Network drives and mapping</h2>
+                <h3 className="bg-white mt-12">How to map a netowrk drive on user computer</h3>
+                <p>
+                    ...
+                </p>
+                <h3 className="bg-white mt-12">How to map a network drive using server computer and active directory with own personal folder based on username</h3>
+                 <p>
+                    ...
+                </p>
             </div>
         </div>
         
