@@ -256,11 +256,13 @@ const HelpDeskLab: React.FC = () => {
                 <h2 className="sub-heading">Network drives and mapping</h2>
                 <h3 className="bg-white mt-12">How to map a netowrk drive on user computer</h3>
                 <p>
-                    ...
+                    Find the network directory/file path you would like to map &#40;network folder looks like \\&#123;server computer name&#125;\&#123;share name&#125;&#41;. Copy it, right click "ThisPC", select map network drive
+                    and paste path in ":folder". Check reconnect at sign in and hit finish.
                 </p>
                 <h3 className="bg-white mt-12">How to map a network drive using server computer and active directory with own personal folder based on username</h3>
                  <p>
-                    ...
+                    Go to "Shares" folder, right click share folder. Select properties, go to sharing tab, click security, see group for account, go back to sharing tab. Open active directory, go to group, find user, double click user, select profile. 
+                    Copy netowrk path from "sharing" tab and paste network path "\\&#123;server computer name&#125;\&#123;share name&#125;" to "Home folder". Go to Connect: To: and add "\%username%" to end of path. Hit apply and ok. 
                 </p>
             </div>
         </div>
