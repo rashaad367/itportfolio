@@ -265,6 +265,37 @@ const HelpDeskLab: React.FC = () => {
                     Copy netowrk path from "sharing" tab and paste network path "\\&#123;server computer name&#125;\&#123;share name&#125;" to "Home folder". Go to Connect: To: and add "\%username%" to end of path. Hit apply and ok. 
                 </p>
             </div>
+            <div className="my-16">
+                <h2 className="sub-heading">Installing application on virtual machine</h2>
+                <h3 className="bg-white mt-12">How to install applications on to virtual machine</h3>
+                <p>
+                    On the virtual machine, go to devices, insert guest additions CD image. Go to "ThisPC", double click oracle VM VirtualBox guest additions. Hit install and then reboot. Right click folder icon on Virtual Box and select share folder. Make a new
+                    folder, click other from dropdown, and click downloads. Create new folder, select folder, auto mount, and select newly created folder. Right click on virtual machine cd and remove disk. Download application installation and put it in folder that
+                    is connected to virtual machine. Go to open that folder &#40;or refresh&#41; in virtual machine, and drag installation out of the folder onto desktop. Go to virtual machine devices, network settings, bridged adapter, click ok. Go to control panel,
+                    "view networks satatus...", change adapter settings, select properties, change back to DHCP through making IPv4 not static. Make sure you connected to the internet by using ping 8.8.8.8. Now you should be able to install applications.
+                </p>
+            </div>
+            <div className="my-16">
+                <h2 className="sub-heading">GPO and account policies</h2>
+                <h3 className="bg-white mt-12">Removing, shut down and restart on GPO for people remoting in from home and accidently shutting down computers in office &#40;preventing them from logging back in to do work&#41;</h3>
+                <p>
+                    Go to cmd line, gpupdate /force to update policy. You can also use gpresult /? for help. Use gpresult /r in command line. Go to server manager on server computer. Go to group policy management, find the domain name of your server. Right click group
+                    policy objects, select new, name this GPO "Task manager" and hit ok. Click Task manager GPO, go to the delegation tab, add the user that add your choosen user read permissions only. Right click Task Manager and go to Ctrl+Alt+Del Options. Enable remove
+                    change password and enable remove task maanger. Grab the GPO and drag it in OU you want it to be in. Rgith click GPO in OU and click enforced. At this point, these policies are automatically active. There is no need to re-log into account or reboot.
+                    On user computer you can use gpresult /r to see what applied GPOs there are on that account. You can still open task maanger through run as admin of the server, &#40;not helpdesk&#41;.
+                </p>
+                <h3 className="bg-white mt-12">Checking users account policy through GPO</h3>
+                <p>
+                    Right click group policy results. Select "group policy wizard...", click next, browser, put user computer in, hit next, select your choosen user, and hit next until finished. Click choosen user on that users respective computer/machine. This will tell
+                    us the policy information with that users account. You can then delete item after you check.
+                </p>
+                <h3 className="bg-white mt-12">Checking users account policy through Active Directory</h3>
+                <p>
+                    Go to Server manager. Next, go to Active directory users and computers. In group, right click the choosen user, hover over all task. Pull up RSOP &40;resultant set of policy wizard&#41;. Select another computer, browse, choose the users respective computer
+                    and hit next. Select specific user: &#123;server domain name&#125;\&#123;user&#125;, click next and finish. Now you can view what's going on with users computer policy.
+                </p>
+            </div>
+            
         </div>
         
 
