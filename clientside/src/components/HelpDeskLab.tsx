@@ -155,54 +155,55 @@ const HelpDeskLab: React.FC = () => {
           </p>
           <h3 className="bg-white mt-12">Enabling recycle bin in active directory</h3>
           <p>
-            Go to the "Active Directory Administrative Center" applicaton. Go to domain "&#123;domain service name&#125; &#40;local&#41;"". Click "enable
-            recycle bin", then hit ok. Hit the refresh button and "enable recycle bin" should be greyed out. Check to see if you have "Deleted Objects" folder.
+            Go to the "Active Directory Administrative Center" application. Go to domain "&#123;domain service name&#125; &#40;local&#41;". Click "enable
+            recycle bin", then hit ok. Hit the refresh button and "enable recycle bin" should be greyed out. Check to see if you have a "Deleted Objects"
+            folder.
           </p>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Command advanced with Organizational Unit &#40;OU&#41;</h2>
           <h3 className="bg-white mt-12">Comman advanced features invovled with OU</h3>
           <p>
-            Open Server Manager. Create user account through active directory. Create or put in appropriate organizational unit. Grab user and place in OU. Go
-            to view and select advanced features, then click on OU and double lcick user so you can see attribute editor for general account info &#40;password
-            expires, last set, principle name, etc&#41;. Right click user, go to all task, and hit resultant set policy &#40;logging&#41;. Under computer
-            selection, select another computer, browse, and then put in &#40;helpdesk&#41; desktop name. Finish policy wizard setup. View policies set up on
-            that computer.
+            Open Server Manager. Create a user account through Active Directory. Create or put in an appropriate organizational unit. Grab the user and place it
+            in the organizational unit. Go to view and select advanced features, then click on OU and double-click the user to see the Attribute Editor for
+            general account info &#40;password expires, last set, principle name, etc&#41;. Right-click the user, go to all tasks, and hit the resultant set
+            policy &#40;logging&#41;. Under computer selection, select another computer, browse, and then put in the &#40;helpdesk&#41; desktop name. Finish
+            policy wizard setup. View policies set up on that computer.
           </p>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Group Policy Management</h2>
           <h3 className="bg-white mt-12">Working with Group Policy Management &#40;GPO&#41;</h3>
           <p>
-            Go to Server Manager, and click on tools. Hit Group Policy Management and select default domain, and then settings. View policy information
-            &#40;tip: take screen shot of policy that has to do with many accounts&#41;. If account lockout threshold is zero &#40;0 invalid log in
-            attempts&#41; then change through Group Policy Management editor so accounts don't get logged out on accident from first attempt.
+            Go to Server Manager, and click on tools. Hit Group Policy Management select default domain, and then settings. View policy information &#40;tip:
+            take a screenshot of a policy that has to do with many accounts&#41;. If the account lockout threshold is zero &#40;0 invalid login attempts&#41;
+            then change through the Group Policy Management editor so accounts don't get logged out on accident from the first attempt.
           </p>
           <h3 className="bg-white mt-12">Opening Group Policy Management editor</h3>
           <p>
-            In Group Policy Management, right click default domain policy. Click edit, and it opens. Under policies and window settings you have your Security
-            Settings and these hold the account policies.
+            In Group Policy Management, right-click the default domain policy. Click edit, and it opens. Under policies and window settings, you have your
+            Security Settings and these hold the account policies.
           </p>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Common Commandline Commands</h2>
-          <h3 className="bg-white mt-12">Common Commands used in the Windows commandline</h3>
+          <h3 className="bg-white mt-12">Common Commands used in the Windows command line</h3>
           <p>
-            ipconfig: shows a general overview of your Windows IP Configuration, displays the IP address, Subnet Mask, and Default Gateway for all adapters.
+            ipconfig: shows a general overview of your Windows IP Configuration, and displays the IP address, Subnet Mask, and Default Gateway for all adapters.
             ipconfig /all: Details of every network connection including your physical &#40;MAC&#41; address, DHCP connections, lease durations, and
             comprehensive IPv6 data will be provided. net use: shows shared drives the current user is connected to net user &#123;user&#125; /domain, can be
-            used to create, delete, enable or disable user accounts on the system and set passwords for network user accounts for server. You may have to run as
-            administrator to use this. Can also be used to quickly check if password for an account is about to expire.
+            used to create, delete, enable, or disable user accounts on the system and set passwords for network user accounts for the server. You may have to
+            run as an administrator to use this. It can also be used to quickly check if the password for an account is about to expire.
           </p>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Common Active Directory Issues</h2>
           <h3 className="bg-white mt-12">Common issues in active directory</h3>
           <p>
-            User gets locked out: go to users account in active directory, double click, hit unlock &#40;could be because outlook, VPN, mobile, computer, or
-            being connected on more than two devices&#41;.
+            The user gets locked out: go to the user's account in Active Directory, double-click the user’s account, and hit unlock &#40;this could be because
+            of Outlook, VPN, mobile, computer, or being connected on more than two devices&#41;.
           </p>
-          <p>Account disabled: go to users account in active directory, double click, select account, enable account, reset password.</p>
+          <p>Account disabled: go to the user account in Active Directory, double-click, select account, enable account, and reset password.</p>
           <p>
             Account expired: either the fix is changing the password in active directory for that account or to change the expiration date &#40;find account,
             double click it, go to account tab to do this&#41;. After this you can use "net user &#123;user account name&#125; /domain" in the command line to
