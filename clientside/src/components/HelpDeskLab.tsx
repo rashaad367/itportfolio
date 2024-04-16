@@ -205,46 +205,45 @@ const HelpDeskLab: React.FC = () => {
           </p>
           <p>Account disabled: go to the user account in Active Directory, double-click, select account, enable account, and reset password.</p>
           <p>
-            Account expired: either the fix is changing the password in active directory for that account or to change the expiration date &#40;find account,
-            double click it, go to account tab to do this&#41;. After this you can use "net user &#123;user account name&#125; /domain" in the command line to
-            see if account settings are set right.
+            Account expired: either the fix is changing the password in the active directory for that account or changing the expiration date &#40;find the
+            account, double-click it, and go to the account tab to do this&#41;. After this, you can use "net user &#123;user account name&#125; /domain" in the
+            command line to see if account settings are set right.
           </p>
           <p>
-            Computer is disabled: if prompted "The security database on the server does not have a computer account for this workstation trust relationship", go
-            to active directory, go to domain, go to computers and enable the computer/desktop.
+            A computer is disabled: if prompted "The security database on the server does not have a computer account for this workstation trust relationship",
+            go to Active Directory, go to the domain, go to computers, and enable the computer/desktop.
           </p>
           <p>
             Computer fallen/deleted from domain: local users should still work but domain server accounts won't. Usually when trying to log in a message appears
             stating "The security database on the server does not have a computer account for this workstation trust relationship". In this case, ping the
-            computer/desktop to see if it is on server. Log in as a local user whilst using &#40;..\administrator&#41;. Once logged in, go to "ThisPC", its
-            properties, and go to change settings, change computer name settings, change to workgroup, press ok and restart. Log back in and go to computer name
-            settings and set back to domain. Now go back to active directory and check if computer shows up &#40;may need to refresh&#41;.
+            computer/desktop to see if it is on the server. Log in as a local user while using &#40;..\administrator&#41;. Once logged in, go to "ThisPC", its
+            properties, and go to change settings, change computer name settings, change to a workgroup, press ok, and restart. Log back in go to computer name
+            settings and set back to domain. Now go back to Active Directory and check if the computer shows up &#40;may need to refresh&#41;.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Removing user after adding admin account to desktop with advanced system settings</h2>
+          <h2 className="sub-heading">Removing User After Adding Admin Account to Desktop With Advanced System Settings</h2>
           <h3 className="bg-white mt-12">
             Removing users after adding admin account to desktop with advanced system settings &#40;not AD&#41; and adding to domain
           </h3>
           <p>
-            Go to file explorer, "ThisPC", and press manage. Go to local users and groups, users, and enable administrator account. Sign out of user account and
-            sign in with admin account. Go to file explorer, ThisPC, right click for properties, click advanced system settings, go to users profiles settings,
-            and delete the placeholder user account. Open control panel, view network status, and change the adapter settings. Set up static IP so you can
-            connect to server form virtual environment. Through the virtual machine, go to devices, click network, and select the host-only adapter. Open
-            command line and ping domain server &#40;should give a response&#41;. Within ThisPC go to advanced system settings, the properties tab, and change
-            computer name settings. You make the admin account a member of the domain. Here you may be prompted for admin or helpdesk credentials. Now, you can
-            check to see if desktop is added to comptuers in Active Directory. You should also check to see if you can log into another users account that is on
-            the sersver.
+            Go to file explorer, "ThisPC", and press manage. Go to local users and groups, users, and enable administrator account. Sign out of the user account
+            and sign in with the admin account. Go to File Explorer, ThisPC, right-click for properties, click advanced system settings, go to user profiles
+            settings, and delete the placeholder user account. Open the control panel, view the network status, and change the adapter settings. Set up a static
+            IP and connect to the server from the virtual environment. Through the virtual machine, go to devices, click network, and select the host-only
+            adapter. Open the command line and ping the domain server &#40;this should give a response&#41;. Within ThisPC go to advanced system settings, the
+            properties tab, and change computer name settings. You make the admin account a member of the domain. Here you may be prompted for admin or helpdesk
+            credentials. Now, you can check to see if the desktop is added to computers in Active Directory. You should also check to see if you can log into
+            another user's account that’s on the server.
           </p>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Distribution vs. Security Group</h2>
           <h3 className="bg-white mt-12">Distribution groups</h3>
-          <p>In a distribution group, everyone receives email / task that was sent out. The email may have to go through third-party services.</p>
+          <p>In a distribution group, everyone receives a sent-out email/task. The email may have to go through third-party services.</p>
           <h3 className="bg-white mt-12">Security groups</h3>
           <p>
-            Security groups include things such as shared drive permissions, folder access, and VPN access. These ensure more security to enterprise server
-            envinronments.
+            Security groups may include shared drive permissions, folder access, and VPN access. These ensure more security in enterprise server environments.
           </p>
         </div>
 
@@ -252,46 +251,47 @@ const HelpDeskLab: React.FC = () => {
           <h2 className="sub-heading">Creating Security Groups, Shared Folders, Map Drives</h2>
           <h3 className="bg-white mt-12">Creatings shared groups, shared folders, map drives</h3>
           <p>
-            Go to Server Manager. Go to file and storage services, shares, right click Server 2016 are, and click New Share. Hit next, and you hit next again
-            unless you want to choose specific location. Give a share name &#40;usually same as some OU&#41;. Pay attention to \\&#123;server computer
-            name&#125;\&#123;share name&#125;. Create share, go to view folder&#40;s&#41; in local disk or area where stored "shares" folder is. You can check
-            to see if folders are shared through properties, and then sharing. Go to Active Directory, domain, users, right click add group &#40;make sure group
-            type is security&#41;. If you want to know who approves that folder double click group and go to "managed by". Double click group and change
-            "managed by" name using domain server account. Right click on share folder, select properties, put netowrk pathname "\\&#123;server computer
-            name&#125;\&#123;share name&#125; &#40;share folder&#41;", then hit apply and ok. Double click group that is now associated with folder, click
-            members, select add users. Go to share folder, properties, select sharing advanced sharing, disable inheritance, and "convert inherited permissions
-            into explicit...". Make sure to always keep the admin account. Remove instances of "Users", click add, select principle, add helpdesk, add the group
-            that has access to that folder with modify basic permissions. Apply and hit ok. Go to sharing, hit "share...", give group read/write permissions.
-            Check to see if network pathname for file works on user account file explorer. Quick tip, if you want to shortcut the shared file, drag the file
-            icon from the path search bar and put in quick access.
+            Go to Server Manager. Go to file and storage services, shares, right-click Server 2016 and click New Share. Hit next, and you hit next again unless
+            you want to choose a specific location. Give a share name &#40;usually the same as some OU&#41;. Pay attention to \\&#123;server computer
+            name&#125;\&#123;share name&#125;. Create share, go to view folder&#40;s&#41; in the local disk or area where the stored "shares" folder is. You can
+            check to see if folders are shared through properties, and then sharing. Go to Active Directory, domain, users, and right-click add a group
+            &#40;make sure the group type is security&#41;. If you want to know who approves that folder double click group and go to "managed by". Double click
+            group and change the "managed by" name using the domain server account. Right-click on share folder, select properties, put network pathname
+            "\\&#123;server computer name&#125;\&#123;share name&#125; &#40;share folder&#41;", then hit apply and ok. Double-click the group that is now
+            associated with the folder, click members and select Add Users. Go to share folder, properties, select sharing advanced sharing, disable
+            inheritance, and "convert inherited permissions into explicit...". Make sure to always keep the admin account. Remove instances of "Users", click
+            add, select principle, add helpdesk, and add the group that has access to that folder with modified basic permissions. Apply and hit ok. Go to
+            sharing, hit "share...", and give group read/write permissions. Check to see if the network pathname for the file works on the user account file
+            explorer. Quick tip, if you want to shortcut the shared file, drag the file icon from the path search bar and put in quick access.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Network drives and mapping</h2>
+          <h2 className="sub-heading">Network Drives and Mapping</h2>
           <h3 className="bg-white mt-12">How to map a netowrk drive on user computer</h3>
           <p>
             Find the network directory/file path you would like to map &#40;network folder looks like \\&#123;server computer name&#125;\&#123;share
-            name&#125;&#41;. Copy it, right click "ThisPC", select map network drive and paste path in ":folder". Check reconnect at sign in and hit finish.
+            name&#125;&#41;. Copy it, right-click "ThisPC", select map network drive, and paste the path in ": folder". Check reconnect at sign-in and hit
+            finish.
           </p>
           <h3 className="bg-white mt-12">How to map a network drive using server computer and active directory with own personal folder based on username</h3>
           <p>
-            Go to "Shares" folder, right click share folder. Select properties, go to sharing tab, click security, see group for account, go back to sharing
-            tab. Open active directory, go to group, find user, double click user, select profile. Copy netowrk path from "sharing" tab and paste network path
-            "\\&#123;server computer name&#125;\&#123;share name&#125;" to "Home folder". Go to Connect: To: and add "\%username%" to end of path. Hit apply and
-            ok.
+            Go to the "Shares" folder, and right-click the shared folder. Select properties, go to the sharing tab, click security, see the group for the
+            account, and go back to the sharing tab. Open Active Directory, go to group, find user, double click user, select profile. Copy the network path
+            from the "sharing" tab and paste the network path "\\&#123;server computer name&#125;\&#123;share name&#125;" to the "Home folder". Go to Connect:
+            To: and add "\%username%" to the end of the path. Hit apply and ok.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Installing application on virtual machine</h2>
+          <h2 className="sub-heading">Installing Application on Virtual Machine</h2>
           <h3 className="bg-white mt-12">How to install applications on to virtual machine</h3>
           <p>
-            On the virtual machine, go to devices, insert guest additions CD image. Go to "ThisPC", double click oracle VM VirtualBox guest additions. Hit
-            install and then reboot. Right click folder icon on Virtual Box and select share folder. Make a new folder, click other from dropdown, and click
-            downloads. Create new folder, select folder, auto mount, and select newly created folder. Right click on virtual machine cd and remove disk.
-            Download application installation and put it in folder that is connected to virtual machine. Go to open that folder &#40;or refresh&#41; in virtual
-            machine, and drag installation out of the folder onto desktop. Go to virtual machine devices, network settings, bridged adapter, click ok. Go to
-            control panel, "view networks satatus...", change adapter settings, select properties, change back to DHCP through making IPv4 not static. Make sure
-            you connected to the internet by using ping 8.8.8.8. Now you should be able to install applications.
+            On the virtual machine, go to devices, and insert guest additions CD image. Go to "ThisPC", and double click Oracle VM VirtualBox guest additions.
+            Hit install and then reboot. Right-click the folder icon on Virtual Box and select Share folder. Make a new folder, click other from dropdown, and
+            click downloads. Create a new folder, select the folder, automount, and select the newly created folder. Right-click on the virtual machine CD and
+            remove the disk. Download the application installation and put it in the folder connected to the virtual machine. Go to open that folder &#40;or
+            refresh&#41; in the virtual machine, and drag the installation out of the folder onto the desktop. Go to virtual machine devices, network settings,
+            bridged adapter, and click ok. Go to the control panel, "view networks status...", change adapter settings, select properties, and change back to
+            DHCP by making IPv4 not static. Make sure you connect to the internet by using ping 8.8.8.8. Now you should be able to install applications.
           </p>
         </div>
         <div className="my-16">
