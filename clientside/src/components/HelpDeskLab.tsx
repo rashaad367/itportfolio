@@ -295,115 +295,117 @@ const HelpDeskLab: React.FC = () => {
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">GPO and account policies</h2>
+          <h2 className="sub-heading">GPO and Account Policies</h2>
           <h3 className="bg-white mt-12">
             Removing, shut down and restart on GPO for people remoting in from home and accidently shutting down computers in office &#40;preventing them from
             logging back in to do work&#41;
           </h3>
           <p>
-            Go to cmd line, gpupdate /force to update policy. You can also use gpresult /? for help. Use gpresult /r in command line. Go to server manager on
-            server computer. Go to group policy management, find the domain name of your server. Right click group policy objects, select new, name this GPO
-            "Task manager" and hit ok. Click Task manager GPO, go to the delegation tab, add the user that add your choosen user read permissions only. Right
-            click Task Manager and go to Ctrl+Alt+Del Options. Enable remove change password and enable remove task maanger. Grab the GPO and drag it in OU you
-            want it to be in. Rgith click GPO in OU and click enforced. At this point, these policies are automatically active. There is no need to re-log into
-            account or reboot. On user computer you can use gpresult /r to see what applied GPOs there are on that account. You can still open task maanger
-            through run as admin of the server, &#40;not helpdesk&#41;.
+            Go to cmd line, gpupdate /force to update policy. You can also use gpresult /? for help. Use gpresult /r in command line. Go to Server Manager on
+            the server computer. Go to group policy management, and find the domain name of your server. Right-click group policy objects, select new, name this
+            GPO "Task manager" and hit ok. Click Task Manager GPO, go to the delegation tab, and add the user that adds your chosen user read permissions only.
+            Right-click Task Manager and go to Ctrl+Alt+Del Options. Enable remove change password and enable remove task manager. Grab the GPO and drag it into
+            the OU you want it to be in. Right-click GPO in OU and click enforced. At this point, these policies are automatically active. There is no need to
+            log into the account or reboot. On the user's computer, you can use gpresult /r to see what applied GPOs there are on that account. You can still
+            open Task Manager through run as admin of the server, &#40;not helpdesk&#41;.
           </p>
           <h3 className="bg-white mt-12">Checking users account policy through GPO</h3>
           <p>
-            Right click group policy results. Select "group policy wizard...", click next, browser, put user computer in, hit next, select your choosen user,
-            and hit next until finished. Click choosen user on that users respective computer/machine. This will tell us the policy information with that users
-            account. You can then delete item after you check.
+            Right-click group policy results. Select "group policy wizard...", click next, the browser puts the user's computer in, hit next, select your chosen
+            user, and hit next until finished. Click the chosen user on that user's respective computer/machine. This will tell us the policy information with
+            that user's account. You can then delete the item after you check.
           </p>
           <h3 className="bg-white mt-12">Checking users account policy through Active Directory</h3>
           <p>
-            Go to Server manager. Next, go to Active directory users and computers. In group, right click the choosen user, hover over all task. Pull up RSOP
-            &40;resultant set of policy wizard&#41;. Select another computer, browse, choose the users respective computer and hit next. Select specific user:
-            &#123;server domain name&#125;\&#123;user&#125;, click next and finish. Now you can view what's going on with users computer policy.
+            Go to Server Manager. Next, go to Active Directory users and computers. In the group, right-click the chosen user, and hover over all tasks. Pull up
+            RSOP &#40;resultant set of policy wizard&#41;. Select another computer, browse, then choose the user's respective computer, and hit next. Select
+            specific user: &#123;server domain name&#125;\&#123;user&#125;, click next and finish. Now you can view what's going on with the user's computer
+            policy.
           </p>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">PDQ Deploy and Inventory</h2>
           <h3 className="bg-white mt-12">Deploying PDQ</h3>
           <p>
-            Go to package library to get an application. Go to packages to view that application. Right click application, deploy once, choose targets through
-            active directory computers, choose the server/domain and click ok. After that hit deploy now. The application you have just deployed should now be
-            on the desktop you deployed it to. This can be used to install things on the backend without interrupting someone.
+            Go to the package library to get an application. Go to packages to view that application. Right-click application, deploy once, choose targets
+            through active directory computers, choose the server/domain, and click ok. After that hit deploy now. The application you have just deployed should
+            now be on the desktop you deployed it to. This can be used to install things on the backend without interrupting someone.
           </p>
           <h3 className="bg-white mt-12">PDQ Inventory, hardware inventory, applications</h3>
           <p>
-            Install PDQ inventory from PDQ website. Open PDQ Inventory, right click user desktop, run report, go to shared folders, double click desktop. Click
-            computer, view information on computer. Go to applications. Here it shows applications installed on a computer. Go to printers, here is shows
-            printers. There are also more things you can view from here other than just printers and applications. Lets go to "Shares" and double click one of
-            the user$. This will take you to desktop of user &#40;c$, users, &#123;user account&#125;&#41;. You can also add applications through here. With PDQ
-            Inventory you can run commands in other computers, remote in desktops, reboot other computers, and more. You can run reports to print hardware
-            information of computers. PDQ Inventory also has the ability to open PDQ deploy. The biggest use case for this would probably be the ability to run
-            reports.
+            Install PDQ inventory from the PDQ website. Open PDQ Inventory, right-click the user desktop, run a report, go to shared folders, and double-click
+            the desktop. Click computer, and view information on the computer. Go to applications. Here it shows applications installed on a computer. Go to
+            printers, here it shows printers. There are also more things you can view from here other than just printers and applications. Go to "Shares" and
+            double-click one of the user$. This will take you to the desktop of the user &#40;c$, users, &#123;user account&#125;&#41;. You can also add
+            applications through here. With PDQ Inventory you can run commands on other computers, remote in desktops, reboot other computers, and more. You can
+            run reports to print hardware information on computers. PDQ Inventory can also open PDQ Deploy. The biggest use case for this would probably be the
+            ability to run reports.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Printer setup on Microsoft Server 2016</h2>
+          <h2 className="sub-heading">Printer Setup on Microsoft Server 2016</h2>
           <h3 className="bg-white mt-12">Printer set up on Microsoft Server 2016</h3>
           <p>
-            Open Server Manager, go to manage, go to "add role and featuers...", hit next until you react "check and print document services" &#40;add
-            features&#41;. Select print server &#40;next & install&#41; and hit close. In Server Manager, go to tools, print management, right click printer
-            space, and add printer. Typically you would give printer a static IP or DHCP reservation depending on the scale of your network environment. On
-            local port, add a new printer using an existing port: and hit next. Install a new driver and click next. Select printer name, uncheck "share this
-            printer" and click next until finished. Right click new printer, go to properties, go to the sharing tab. From here you can select the option of
-            "list in the directory" and click apply if you want the printer to be findable in Active Directory. You can also view ports and device settings if
-            you choose to. Now, click on the security tab and in advanced settings remove "everyone". After this you can add any authorized groups for that
-            printer. This is important for printer security so not everybody knows who's printing what. Good for lawyers, compliance, HR, etc.If earlier you
-            selected to list the printer in directory, you can go to Active Directory, right click domain, and search for the printer and find it. To check if a
-            printer can be added on a users desktop go to control panel, view devices and printers, add printer, select the printer you want to add, hit next
-            and finish. Check properties of printer if needed at this point. To troubleshoot printer access/drivers go to server manager, tools, printer
-            management, right click printer, go to properties, access the sharing tab, and uncheck list in directory, click apply and ok. Next, go to
-            properties, click advanced, click new drivers to update drivers, and re-list in directory after. It should be noted that cloud printer services are
-            an easier option than this. If a company is looking for simple printer solutions, cloud printer services should be in consideration.
+            Open Server Manager, go to manage, go to "add role and features...", and hit next until you react "check and print document services" &#40;add
+            features&#41;. Select the print server &#40;next & install&#41; and hit close. In Server Manager, go to tools, print management, right-click printer
+            space, and add printer. Typically you would give the printer a static IP or DHCP reservation depending on the scale of your network environment. On
+            the local port, add a new printer using an existing port: and hit next. Install a new driver and click next. Select the printer name, uncheck "share
+            this printer" and click next until finished. Right-click the new printer, go to properties, and go to the sharing tab. From here you can select the
+            option of "list in the directory" and click apply if you want the printer to be findable in Active Directory. You can also view ports and device
+            settings if you choose to. Now, click on the security tab, and in advanced settings remove "everyone". After this, you can add any authorized groups
+            for that printer. This is important for printer security so not everybody knows who's printing what. Good for lawyers, compliance, HR, etc. If
+            earlier you selected to list the printer in the directory, you can go to Active Directory, right-click domain, and search for the printer and find
+            it. To check if a printer can be added on a user's desktop go to the control panel, view devices and printers, add printer, select the printer you
+            want to add, hit next, and finish. Check the properties of the printer if needed at this point. To troubleshoot printer access/drivers go to server
+            manager, tools, printer management, right-click the printer, go to properties, access the sharing tab, uncheck “list in the directory”, click apply,
+            and ok. Next, go to properties, click advanced, click new drivers to update drivers, and re-list in the directory after. It should be noted that
+            cloud printer services are an easier option than this. If a company is looking for simple printer solutions, cloud printer services should be in
+            consideration.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Tickets using Spiceworks and ticketing systems</h2>
+          <h2 className="sub-heading">Tickets using Spiceworks and Ticketing Systems</h2>
           <h3 className="bg-white mt-12">Tickets using Spiceworks, RDP tools</h3>
           <p>
-            Go to spiceworks, tools & apps, and click cloud helpdesk. From here you can create tickets. It is very important to understand ticket system levels
-            &#40;ticket level&#41;. What you'll mostly be concerned about for helpdesk would be creating tickets, assigning tickets, and closing tickets. When
-            closing a ticket just explain what you did to solve a problem. You can also search for old tickets to solve recurring issues.
+            Go to Spiceworks, tools & apps, and click Cloud Helpdesk. From here you can create tickets. It is very important to understand ticket system levels
+            &#40;ticket level&#41;. What you'll mostly be concerned about for the helpdesk would be creating tickets, assigning tickets, and closing tickets.
+            When closing a ticket just explain what you did to solve a problem. You can also search for old tickets to solve recurring issues.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Delegation control</h2>
+          <h2 className="sub-heading">Delegation Control</h2>
           <h3 className="bg-white mt-12">Delegation control &#40;limited access on Active Directory&#41;</h3>
           <p>
-            Go to Active Directory users and computers. Create a new user account and a password for that user account. Create new organization unit
-            &#40;OU&#41; and drag your new user in there. Right click domain, hover over next, add your user, give them permission options, and click finish.
+            Go to Active Directory users and computers. Create a new user account and a password for that user account. Create a new organization unit
+            &#40;OU&#41; and drag your new user in there. Right-click domain, hover over next, add your user, give them permission options, and click finish.
             You can confirm it worked by logging in as that user and seeing if options are grayed out based on delegation.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Account lcokout tool</h2>
+          <h2 className="sub-heading">Account Lockout Tool</h2>
           <h3 className="bg-white mt-12">Account lockout tool</h3>
           <p>
-            Download account lockout tool. Use lockout tool andinstall it where you want. This tool is capable of telling you login/logout attempts and
-            information. Select target, select a user, make sure you on the right domain. Now you can view login/logout information on users and see login
-            attempts and use this to help you troubleshoot login/logout problems.
+            Download the account lockout tool. Use the lockout tool and install it where you want. This tool is capable of telling you login/logout attempts and
+            information. Select a target, select a user, and make sure you are on the right domain. Now you can view login/logout information on users and see
+            login attempts and use this to help you troubleshoot login/logout problems.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Quick performance adjustment &#40;windows&#41;</h2>
+          <h2 className="sub-heading">Quick Performance Adjustment &#40;Windows&#41;</h2>
           <h3 className="bg-white mt-12">Quick performance adjustment</h3>
           <p>
-            Go to file system - on older windows versions, you can do this with "c:" in windows start search bar. Right click "ThisPC", go to properties, go to
-            advanced system settings, and click on the performance option. Now you can adjust for best performance based on memory usage, processor scheduling,
-            and visual effects.
+            Go to file system - on older Windows versions, you can do this with "c:" in the Windows start search bar. Right-click "ThisPC", go to properties, go
+            to advanced system settings, and click on the performance option. Now you can adjust for best performance based on memory usage, processor
+            scheduling, and visual effects.
           </p>
         </div>
         <div className="my-16">
-          <h2 className="sub-heading">Possible interview questions</h2>
+          <h2 className="sub-heading">Possible Interview Questions</h2>
           <h3 className="bg-white mt-12">Other user domain interview question</h3>
           <p>
-            If told its a joined computer &#40;means it's connected to a server&#41; and it says on the login screen "Sign in to: &#123;DOMAIN NAME&#125;", then
-            you know it is connected to a domain and has a local computer name as well. To further check you can click "How do I sign in to another domain?" and
-            you will see "name\domain" & &#123;COMPUTER NAME&#125;\local.
+            If told it is a joined computer &#40;which means it's connected to a server&#41; and it says on the login screen "Sign in to: &#123;DOMAIN
+            NAME&#125;", then you know it is connected to a domain and has a local computer name as well. To further check you can click "How do I sign in to
+            another domain?" and you will see "name\domain" & &#123;COMPUTER NAME&#125;\local
           </p>
           <h3 className="bg-white mt-12">
             What's that feature that Server Manager has that containerizes users, computers, and organizational units &#40;OUs&#41;
