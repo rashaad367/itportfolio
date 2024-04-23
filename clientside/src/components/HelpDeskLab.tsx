@@ -100,17 +100,17 @@ const HelpDeskLab: React.FC = () => {
         <div className="my-16">
           <h2 className="sub-heading">Changing Computer Name</h2>
           <h3 className="bg-white mt-12">Changing computer name</h3>
-          <p>
+          <p className="mb-12">
             Go to File Explorer. On older Windows versions you can quickly access File Explorer with "c:" in the Windows search menu. Right-click "ThisPC", go
             to properties, change settings, computer name, and hit change to change the computer name. After this, restart your computer/desktop.
           </p>
-          <div className="center flex">
+          <div className="flex border justify-evenly">
             <div className="m-9">
-              <h3 className="sub-heading">Step 1</h3>
+              <h3 className="text-white">Step 1</h3>
               <img src={ccn1} alt="Changing computer name step 1" width="400" />
             </div>
             <div className="m-9">
-              <h3 className="sub-heading">Step 2</h3>
+              <h3 className="text-white">Step 2</h3>
               <img src={ccn2} alt="Changing computer name step 2" width="400" />
             </div>
           </div>
