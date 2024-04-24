@@ -9,29 +9,21 @@ type CardProps = {
   link: string;
 };
 
-const Card: React.FC<CardProps> = ({
-  name,
-  imageUrl,
-  description,
-  button1Text,
-  link,
-}) => {
+const Card: React.FC<CardProps> = ({ name, imageUrl, description, button1Text, link }) => {
   return (
-    <div className="container-lg">
+    <div className="container-lg border">
       <div className={style.cardBackground}>
-      <div className={style.pcard}>
-        <h1 className="font-mono center leading-loose text-white font-bold">{name}</h1>
-        <img src={imageUrl} alt="Card" className="mb-4" />
-        <p className="mb-4 leading-relaxed">{description}</p>
-        <div className="flex">
-          <a href={link}
-            className="mr-4 w-1/2 font-bold font-mono transition transform hover:-translate-y-1"
-          >
-            {button1Text}
-          </a>
+        <div className={style.pcard}>
+          <h1 className="font-mono center leading-loose text-white font-bold">{name}</h1>
+          <img src={imageUrl} alt="Card" className="mb-4" />
+          <p className="mb-4 leading-relaxed">{description}</p>
+          <div className="flex">
+            <a href={link} className="mr-4 w-1/2 font-bold font-mono transition transform hover:-translate-y-1">
+              {button1Text}
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
