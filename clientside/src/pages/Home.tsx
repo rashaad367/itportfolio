@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ExperienceTimelime from "../components/ExperienceTimeline";
 import Projects from "../components/Projects";
-import Image from "../assets/photo.jpg";
+import HeadShot from "../assets/gjoint.png";
 import Certifications from "../components/Certifications";
 
 const Home: React.FC = () => {
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="ml-auto flex">
-              <img src={Image} height="200" width="200" alt="headshotimage" className="rounded-full" />
+              <img src={HeadShot} height="200" width="200" alt="headshotimage" className="rounded-full" />
             </div>
           </div>
         </div>
