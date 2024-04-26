@@ -1,5 +1,8 @@
 import React from "react";
 
+// step image component
+import StepImage from "./StepImage";
+
 // project 1 images
 import ccn1 from "../assets/project1pics/ccn1.png";
 import ccn2 from "../assets/project1pics/ccn2.png";
@@ -12,7 +15,7 @@ const HelpDeskLab: React.FC = () => {
         <div className="my-16">
           <h2 className="sub-heading">Remote Desktop</h2>
           <h3 className="bg-white mt-12">Windows 10 Remote</h3>
-          <p>
+          <p className="mb-12">
             Firstly, we will make sure the user's computer has remote access by going to "ThisPC", right-clicking for properties, going to remote settings, and
             using helpdesk or admin credentials if required. Next, we will check “allow remote connections” and allow remote desktop connection on the helpdesk
             computer and type in the computer on the server that you are trying to connect to. If you can't open the remote desktop application go to the user's
@@ -21,7 +24,7 @@ const HelpDeskLab: React.FC = () => {
             with apps by adding "\appdata\" to the user account path.
           </p>
           <h3 className="bg-white mt-12">Remote Registry</h3>
-          <p>
+          <p className="mb-12">
             In the helpdesk computer, go to the start menu, windows administration tools, and open Registry Editor. You may have to enable remote administration
             for Registry. In that case, go to the user's computer, open their start menu, type "services" and run the services app as administrator. Next,
             double-click the Remote Access Connection Manager, run, and do the same with Remote Registry. Set the startup type as automatic, hit apply, start,
@@ -31,7 +34,7 @@ const HelpDeskLab: React.FC = () => {
           <h3 className="bg-white mt-12">Remoting with c$</h3>
           <p>Go to File Explorer and in the search bar type \\&#123;computername&#125;\c$, go into users, and go to the user's account.</p>
           <h3 className="bg-white mt-12">Windows remote tool &#40;windows remote assistance&#41; file invitation</h3>
-          <p>
+          <p className="mb-12">
             Open Windows Remote Assistance to help someone who has invited you. Go into the computer you are trying to remote into, go to File Explorer,
             right-click "ThisPC", click manage, go to groups, remote desktop users, and see if the helpdesk account is there. Next, go to "invite someone to
             connect to your PC and help you" from the start menu. Invite someone to help you and save this invitation as a file on the desktop. Go back to the
@@ -42,17 +45,17 @@ const HelpDeskLab: React.FC = () => {
         <div className="my-16">
           <h2 className="sub-heading">Static IP and DHCP</h2>
           <h3 className="bg-white mt-12">How to tell if IP is statically assigned to device</h3>
-          <p>
+          <p className="mb-12">
             You can use "ipconfig /all" in the command line and if you see "DHCP Enabled: Yes", the IP is not static. Otherwise, if you see "DHCP Enabled: No",
             the IP is static.
           </p>
           <h3 className="bg-white mt-12">How to set up static IP address</h3>
-          <p>
+          <p className="mb-12">
             Go to the control panel and click "view network status and task". Go to change adapter settings, internet, properties, IPV4, and give a static IP
             address.
           </p>
           <h3 className="bg-white mt-12">How to set up static IPs in virtual machine</h3>
-          <p>
+          <p className="mb-12">
             Go to the control panel and click "view network status and task". Go to change adapter settings, internet, properties, IPV4, and give a static IP
             address. Next, go to devices in virtual machine OS, go to network, and change to Host-only adapter.
           </p>
@@ -105,14 +108,8 @@ const HelpDeskLab: React.FC = () => {
             to properties, change settings, computer name, and hit change to change the computer name. After this, restart your computer/desktop.
           </p>
           <div className="flex border justify-evenly">
-            <div className="m-9">
-              <h3 className="text-white">Step 1</h3>
-              <img src={ccn1} alt="Changing computer name step 1" width="400" />
-            </div>
-            <div className="m-9">
-              <h3 className="text-white">Step 2</h3>
-              <img src={ccn2} alt="Changing computer name step 2" width="400" />
-            </div>
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
           </div>
         </div>
         <div className="my-16">
