@@ -23,6 +23,10 @@ const HelpDeskLab: React.FC = () => {
             "ThisPC", users, click the user of interest, and hit continue. Now you can add stuff, or mess with account directories/folders. You can also mess
             with apps by adding "\appdata\" to the user account path.
           </p>
+          <div className="flex border justify-evenly">
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
+          </div>
           <h3 className="bg-white mt-12">Remote Registry</h3>
           <p className="mb-12">
             In the helpdesk computer, go to the start menu, windows administration tools, and open Registry Editor. You may have to enable remote administration
@@ -31,6 +35,10 @@ const HelpDeskLab: React.FC = () => {
             and then ok. Go back to the helpdesk computer and in Registry Editor click the file dropdown, and then type the user's computer name in. Be careful
             not to break the whole computer from the Registry! Something neat you can do here is go to Network and see if shared drives are there.
           </p>
+          <div className="flex border justify-evenly">
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
+          </div>
           <h3 className="bg-white mt-12">Remoting with c$</h3>
           <p>Go to File Explorer and in the search bar type \\&#123;computername&#125;\c$, go into users, and go to the user's account.</p>
           <h3 className="bg-white mt-12">Windows remote tool &#40;windows remote assistance&#41; file invitation</h3>
