@@ -49,6 +49,10 @@ const HelpDeskLab: React.FC = () => {
             helpdesk computer, and press use an invitation file. Remote into computer with c$ with c$\\&#123;computername\&#125; in file explorer, go to users,
             &#123;user account&#125;, desktop, and open invitation file. The password to remote into the user's computer is given by the user.
           </p>
+          <div className="flex border justify-evenly">
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
+          </div>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Static IP and DHCP</h2>
