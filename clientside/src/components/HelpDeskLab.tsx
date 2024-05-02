@@ -61,11 +61,19 @@ const HelpDeskLab: React.FC = () => {
             You can use "ipconfig /all" in the command line and if you see "DHCP Enabled: Yes", the IP is not static. Otherwise, if you see "DHCP Enabled: No",
             the IP is static.
           </p>
+          <div className="flex border justify-evenly">
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
+          </div>
           <h3 className="bg-white mt-12">How to set up static IP address</h3>
           <p className="mb-12">
             Go to the control panel and click "view network status and task". Go to change adapter settings, internet, properties, IPV4, and give a static IP
             address.
           </p>
+          <div className="flex border justify-evenly">
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
+          </div>
           <h3 className="bg-white mt-12">How to set up static IPs in virtual machine</h3>
           <p className="mb-12">
             Go to the control panel and click "view network status and task". Go to change adapter settings, internet, properties, IPV4, and give a static IP
@@ -76,6 +84,10 @@ const HelpDeskLab: React.FC = () => {
             Go to the control panel, and open view network status and task. Next, go to network IPv4 and put it back to default/DHCP settings. Go to virtual
             machine devices, click network, and change to bridged adapter. You can also enable promiscuous mode if need be.
           </p>
+          <div className="flex border justify-evenly">
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
+          </div>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Installing Windows Server 2016</h2>
@@ -88,6 +100,10 @@ const HelpDeskLab: React.FC = () => {
             the computer name to something such as &#40;Server2016&#41;. Optionally, you can adjust your OS to be set for best performance to decrease possible
             lag from here.
           </p>
+          <div className="flex border justify-evenly">
+            <StepImage number="1" imageUrl={ccn1} />
+            <StepImage number="2" imageUrl={ccn2} />
+          </div>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Installing Windows 10</h2>
