@@ -23,22 +23,15 @@ const HelpDeskLab: React.FC = () => {
             "ThisPC", users, click the user of interest, and hit continue. Now you can add stuff, or mess with account directories/folders. You can also mess
             with apps by adding "\appdata\" to the user account path.
           </p>
-          <div className="flex border justify-evenly">
-            <StepImage number="1" imageUrl={ccn1} />
-            <StepImage number="2" imageUrl={ccn2} />
-          </div>
           <h3 className="bg-white mt-12">Remote Registry</h3>
           <p className="mb-12">
             In the helpdesk computer, go to the start menu, windows administration tools, and open Registry Editor. You may have to enable remote administration
             for Registry. In that case, go to the user's computer, open their start menu, type "services" and run the services app as administrator. Next,
             double-click the Remote Access Connection Manager, run, and do the same with Remote Registry. Set the startup type as automatic, hit apply, start,
-            and then ok. Go back to the helpdesk computer and in Registry Editor click the file dropdown, and then type the user's computer name in. Be careful
-            not to break the whole computer from the Registry! Something neat you can do here is go to Network and see if shared drives are there.
+            and then ok. Go back to the helpdesk computer and in Registry Editor click the file dropdown, select "Connect network registry", and then type the
+            user's computer name in. Be careful not to break the whole computer from the Registry! Something neat you can do here is go to Network and see if
+            shared drives are there.
           </p>
-          <div className="flex border justify-evenly">
-            <StepImage number="1" imageUrl={ccn1} />
-            <StepImage number="2" imageUrl={ccn2} />
-          </div>
           <h3 className="bg-white mt-12">Remoting with c$</h3>
           <p>Go to File Explorer and in the search bar type \\&#123;computername&#125;\c$, go into users, and go to the user's account.</p>
           <h3 className="bg-white mt-12">Windows remote tool &#40;windows remote assistance&#41; file invitation</h3>
@@ -49,10 +42,6 @@ const HelpDeskLab: React.FC = () => {
             helpdesk computer, and press use an invitation file. Remote into computer with c$ with c$\\&#123;computername\&#125; in file explorer, go to users,
             &#123;user account&#125;, desktop, and open invitation file. The password to remote into the user's computer is given by the user.
           </p>
-          <div className="flex border justify-evenly">
-            <StepImage number="1" imageUrl={ccn1} />
-            <StepImage number="2" imageUrl={ccn2} />
-          </div>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Static IP and DHCP</h2>
@@ -61,19 +50,13 @@ const HelpDeskLab: React.FC = () => {
             You can use "ipconfig /all" in the command line and if you see "DHCP Enabled: Yes", the IP is not static. Otherwise, if you see "DHCP Enabled: No",
             the IP is static.
           </p>
-          <div className="flex border justify-evenly">
-            <StepImage number="1" imageUrl={ccn1} />
-            <StepImage number="2" imageUrl={ccn2} />
-          </div>
+
           <h3 className="bg-white mt-12">How to set up static IP address</h3>
           <p className="mb-12">
             Go to the control panel and click "view network status and task". Go to change adapter settings, internet, properties, IPV4, and give a static IP
             address.
           </p>
-          <div className="flex border justify-evenly">
-            <StepImage number="1" imageUrl={ccn1} />
-            <StepImage number="2" imageUrl={ccn2} />
-          </div>
+
           <h3 className="bg-white mt-12">How to set up static IPs in virtual machine</h3>
           <p className="mb-12">
             Go to the control panel and click "view network status and task". Go to change adapter settings, internet, properties, IPV4, and give a static IP
@@ -84,10 +67,6 @@ const HelpDeskLab: React.FC = () => {
             Go to the control panel, and open view network status and task. Next, go to network IPv4 and put it back to default/DHCP settings. Go to virtual
             machine devices, click network, and change to bridged adapter. You can also enable promiscuous mode if need be.
           </p>
-          <div className="flex border justify-evenly">
-            <StepImage number="1" imageUrl={ccn1} />
-            <StepImage number="2" imageUrl={ccn2} />
-          </div>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Installing Windows Server 2016</h2>
@@ -100,10 +79,6 @@ const HelpDeskLab: React.FC = () => {
             the computer name to something such as &#40;Server2016&#41;. Optionally, you can adjust your OS to be set for best performance to decrease possible
             lag from here.
           </p>
-          <div className="flex border justify-evenly">
-            <StepImage number="1" imageUrl={ccn1} />
-            <StepImage number="2" imageUrl={ccn2} />
-          </div>
         </div>
         <div className="my-16">
           <h2 className="sub-heading">Installing Windows 10</h2>
